@@ -6,6 +6,6 @@ services:
     stop_signal: SIGKILL
     command: ./restart.sh
     ports:
-      - "9899:9899"
+      - "${FILER_PORT:-9899}:9899"
     volumes:
-      - ~/media-uploads:/uploads
+      - ${FILER_LIBRARY}:/uploads
