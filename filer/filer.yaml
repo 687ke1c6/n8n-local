@@ -1,0 +1,11 @@
+services:
+  filer:
+    container_name: filer
+    build: filer
+    restart: "unless-stopped"
+    stop_signal: SIGKILL
+    command: ./restart.sh
+    ports:
+      - "9899:9899"
+    volumes:
+      - ~/media-uploads:/uploads
