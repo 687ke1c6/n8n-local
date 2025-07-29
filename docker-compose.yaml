@@ -36,4 +36,4 @@ services:
     volumes:
       - ./.n8n:/home/node/.n8n
       - ./local-files:/files
-      - ${MEDIA_LIBRARY}:/media
+      - ${MEDIA_LIBRARY:-~/media}:/media
