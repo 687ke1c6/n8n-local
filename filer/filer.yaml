@@ -4,7 +4,7 @@ services:
     build: filer
     restart: "unless-stopped"
     stop_signal: SIGKILL
-    command: ./restart.sh
+    command: bash -c "cd /uploads && ncat -l -p 9899 | tar xvf -"
     ports:
       - "${FILER_PORT:-9899}:9899"
     volumes:
