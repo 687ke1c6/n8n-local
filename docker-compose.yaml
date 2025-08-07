@@ -40,3 +40,4 @@ services:
       - ./local-files:/files
       - /media/ext/ssd500gb/drop-docs:/data
       - ${MEDIA_LIBRARY:-~/media}:/media
+      - ${FILER_LIBRARY}:/uploads
