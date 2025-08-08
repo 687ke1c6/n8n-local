@@ -44,6 +44,10 @@ case "$1" in
     docker exec -it n8n n8n import:credentials --input=/files/credentials.json
     docker exec -it n8n n8n import:workflow --input=/files/workflows.json
     ;;
+  "execute")
+    shift
+    docker exec -it n8n n8n execute --id "$@"
+    ;;
   *)
     echo "Usage: $0 {up|down|restart|logs|export}"
     exit 1
