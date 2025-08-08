@@ -46,7 +46,7 @@ case "$1" in
     ;;
   "execute")
     shift
-    docker exec -it n8n n8n execute --id "$@"
+    docker exec n8n n8n execute --id "$@"
     ;;
   *)
     echo "Usage: $0 {up|down|restart|logs|export}"
